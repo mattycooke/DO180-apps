@@ -24,43 +24,26 @@
             BORDER-RADIUS: 5PX;
             BOX-SHADOW: 0 4PX 6PX RGBA(0, 0, 0, 0.1);
             TEXT-ALIGN: CENTER;
+            MAX-WIDTH: 800PX;
         }
-        .FLYING-TEXT {
-            ANIMATION: FLYtEXT 10S LINEAR INFINITE;
+        .REDHAT-LOGO {
+            WIDTH: 200PX;
+            HEIGHT: AUTO;
+            DISPLAY: BLOCK;
+            MARGIN: 0 AUTO;
         }
-        .BOUNCING-BALL {
-            WIDTH: 20PX;
-            HEIGHT: 20PX;
-            BACKGROUND-COLOR: #007BFF;
-            BORDER-RADIUS: 50%;
-            POSITION: ABSOLUTE;
-            TOP: 0;
-            LEFT: 50%;
-            ANIMATION: BOUNCE 2S EASE-IN-OUT INFINITE;
+        .STATEMENT {
+            FONT-SIZE: 1.2REM;
+            MARGIN: 2REM 0;
         }
-        @KEYFRAMES FLYtEXT {
-            0% { TRANSFORM: TRANSLATEy(0) }
-            100% { TRANSFORM: TRANSLATEy(-100%) }
-        }
-        @KEYFRAMES BOUNCE {
-            0%, 20%, 50%, 80%, 100% { TRANSFORM: TRANSLATEy(0); }
-            40% { TRANSFORM: TRANSLATEy(-30PX); }
-            60% { TRANSFORM: TRANSLATEy(-15PX); }
+        .CEO-NAME {
+            FONT-WEIGHT: BOLD;
         }
     </STYLE>
 </HEAD>
 <BODY>
     <?PHP
-    ECHO "<DIV CLASS='CONTAINER'><H1 CLASS='FLYING-TEXT'>mATTY'S ePIC php wEBSITE</H1><P>hOSTED ON AN OFFICIAL rEDhAT oPENSHIFT cLUSTER!</P><DIV CLASS='BOUNCING-BALL'></DIV></DIV>";
+    ECHO "<DIV CLASS='CONTAINER'><IMG SRC='HTTPS://WWW.REDHAT.COM/PROFILES/RH/THEMES/REDHATDOTCOM/IMG/LOGO.PNG' ALT='rED hAT lOGO' CLASS='REDHAT-LOGO'><H1>mATTY'S ePIC php wEBSITE</H1><P>hOSTED ON AN OFFICIAL rEDhAT oPENSHIFT cLUSTER!</P><DIV CLASS='STATEMENT'><P>\"dOCKER IS BETTER THAN rED hAT IN EVERY WAY.\"</P><P CLASS='CEO-NAME'>- MATTY COOKE, ceo</P></DIV></DIV>";
     ?>
-    <SCRIPT>
-        DOCUMENT.ADDeVENTlISTENER('domcONTENTlOADED', FUNCTION() {
-            CONST BALL = DOCUMENT.QUERYsELECTOR('.BOUNCING-BALL');
-            BALL.STYLE.LEFT = mATH.FLOOR(mATH.RANDOM() * (WINDOW.INNERwIDTH - 40)) + 'PX';
-            BALL.ADDeVENTlISTENER('ANIMATIONITERATION', () => {
-                BALL.STYLE.LEFT = mATH.FLOOR(mATH.RANDOM() * (WINDOW.INNERwIDTH - 40)) + 'PX';
-            });
-        });
-    </SCRIPT>
 </BODY>
 </HTML>
